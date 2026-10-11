@@ -1,0 +1,49 @@
+<svg viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="fav-cyan-teal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7ff5ee" />
+      <stop offset="50%" stop-color="#3fd0e6" />
+      <stop offset="100%" stop-color="#1f9fd8" />
+    </linearGradient>
+    <radialGradient id="fav-core-glow" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="35%" stop-color="#7ff5ee" />
+      <stop offset="70%" stop-color="#1f9fd8" />
+      <stop offset="100%" stop-color="#082b4a" />
+    </radialGradient>
+    <radialGradient id="fav-sphere-glow" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="50%" stop-color="#7ff5ee" />
+      <stop offset="100%" stop-color="#1f9fd8" />
+    </radialGradient>
+  </defs>
+
+  <!-- Outer Ring -->
+  <circle cx="120" cy="120" r="114" stroke="url(#fav-cyan-teal)" stroke-width="4" stroke-opacity="0.8" />
+  <circle cx="120" cy="6" r="6" fill="#7ff5ee" />
+  <circle cx="234" cy="120" r="5" fill="#3fd0e6" />
+  <circle cx="6" cy="120" r="5" fill="#1f9fd8" />
+  <circle cx="120" cy="234" r="6" fill="#7ff5ee" />
+
+  <!-- Orbit 1 -->
+  <g transform="rotate(-35 120 120)">
+    <ellipse cx="120" cy="120" rx="34" ry="92" stroke="url(#fav-cyan-teal)" stroke-width="8" fill="none" />
+    <circle cx="120" cy="28" r="9" fill="url(#fav-sphere-glow)" />
+  </g>
+
+  <!-- Orbit 2 -->
+  <g transform="rotate(35 120 120)">
+    <ellipse cx="120" cy="120" rx="34" ry="92" stroke="url(#fav-cyan-teal)" stroke-width="8" fill="none" />
+    <circle cx="120" cy="212" r="9" fill="url(#fav-sphere-glow)" />
+  </g>
+
+  <!-- Orbit 3 -->
+  <g transform="rotate(90 120 120)">
+    <ellipse cx="120" cy="120" rx="34" ry="92" stroke="url(#fav-cyan-teal)" stroke-width="8" fill="none" />
+    <circle cx="120" cy="28" r="9" fill="url(#fav-sphere-glow)" />
+  </g>
+
+  <!-- Core Glowing Nucleus -->
+  <circle cx="120" cy="120" r="28" fill="url(#fav-core-glow)" />
+  <circle cx="112" cy="112" r="6" fill="#ffffff" opacity="0.85" />
+</svg>

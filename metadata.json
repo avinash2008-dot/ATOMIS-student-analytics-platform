@@ -1,0 +1,6 @@
+{
+  "name": "ApexEdu - AI Student Analytics & Success Platform",
+  "description": "Enterprise-grade AI student analytics and success platform featuring early-warning dropout risk scoring, personalized academic interventions, technical skill benchmark tracking, and placement readiness intelligence with student AI copilot and parent portal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

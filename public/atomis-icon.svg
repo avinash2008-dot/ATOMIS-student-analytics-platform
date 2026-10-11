@@ -1,0 +1,70 @@
+<svg viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="atomis-nucleus-gloss" cx="38%" cy="34%" r="62%" fx="35%" fy="30%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="18%" stop-color="#d3d7de" />
+      <stop offset="45%" stop-color="#5a606d" />
+      <stop offset="80%" stop-color="#1f232b" />
+      <stop offset="100%" stop-color="#08090d" />
+    </radialGradient>
+    <radialGradient id="atomis-nucleus-shadow" cx="50%" cy="50%" r="50%">
+      <stop offset="70%" stop-color="#000000" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="atomis-ring-orange" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFA100" />
+      <stop offset="45%" stop-color="#FF6B00" />
+      <stop offset="100%" stop-color="#E64A00" />
+    </linearGradient>
+    <radialGradient id="atomis-sphere-orange" cx="35%" cy="32%" r="65%">
+      <stop offset="0%" stop-color="#FFF2D6" />
+      <stop offset="25%" stop-color="#FF9500" />
+      <stop offset="75%" stop-color="#E64A00" />
+      <stop offset="100%" stop-color="#8A2300" />
+    </radialGradient>
+    <linearGradient id="atomis-ring-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00E1FF" />
+      <stop offset="50%" stop-color="#00A2F3" />
+      <stop offset="100%" stop-color="#0066FF" />
+    </linearGradient>
+    <radialGradient id="atomis-sphere-blue" cx="35%" cy="32%" r="65%">
+      <stop offset="0%" stop-color="#E2F7FF" />
+      <stop offset="25%" stop-color="#00B8FF" />
+      <stop offset="75%" stop-color="#0072D6" />
+      <stop offset="100%" stop-color="#00357A" />
+    </radialGradient>
+    <linearGradient id="atomis-ring-green" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#A6FF00" />
+      <stop offset="45%" stop-color="#55D800" />
+      <stop offset="100%" stop-color="#1DAE00" />
+    </linearGradient>
+    <radialGradient id="atomis-sphere-green" cx="35%" cy="32%" r="65%">
+      <stop offset="0%" stop-color="#F2FFDC" />
+      <stop offset="25%" stop-color="#7BEB00" />
+      <stop offset="75%" stop-color="#25A800" />
+      <stop offset="100%" stop-color="#0F5400" />
+    </radialGradient>
+  </defs>
+
+  <!-- Orange Orbit Ring -->
+  <g transform="rotate(2 120 120)">
+    <ellipse cx="120" cy="120" rx="35" ry="98" stroke="url(#atomis-ring-orange)" stroke-width="10" stroke-linecap="round" fill="none" />
+    <circle cx="132" cy="210" r="13" fill="url(#atomis-sphere-orange)" />
+  </g>
+
+  <!-- Blue Orbit Ring -->
+  <g transform="rotate(-34 120 120)">
+    <ellipse cx="120" cy="120" rx="35" ry="98" stroke="url(#atomis-ring-blue)" stroke-width="10" stroke-linecap="round" fill="none" />
+    <circle cx="120" cy="22" r="13" fill="url(#atomis-sphere-blue)" />
+  </g>
+
+  <!-- Green Orbit Ring -->
+  <g transform="rotate(50 120 120)">
+    <ellipse cx="120" cy="120" rx="35" ry="98" stroke="url(#atomis-ring-green)" stroke-width="10" stroke-linecap="round" fill="none" />
+    <circle cx="120" cy="22" r="13" fill="url(#atomis-sphere-green)" />
+  </g>
+
+  <!-- Center Nucleus -->
+  <circle cx="120" cy="120" r="32" fill="url(#atomis-nucleus-shadow)" />
+  <circle cx="120" cy="120" r="28" fill="url(#atomis-nucleus-gloss)" />
+</svg>

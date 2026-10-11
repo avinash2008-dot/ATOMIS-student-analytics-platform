@@ -1,0 +1,63 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User profile with role authentication (Student, Parent, Teacher, Admin)",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "description": "Firebase Auth UID" },
+        "email": { "type": "string", "description": "User email address" },
+        "displayName": { "type": "string", "description": "Full name" },
+        "role": { "type": "string", "enum": ["student", "parent", "teacher", "admin"], "description": "User role" },
+        "linkedStudentId": { "type": "string", "description": "Associated student identifier" },
+        "createdAt": { "type": "string", "description": "Timestamp ISO" }
+      },
+      "required": ["uid", "email", "displayName", "role"]
+    },
+    "StudentRecord": {
+      "title": "StudentRecord",
+      "description": "Student academic and attendance record for success tracking",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Student ID" },
+        "rollNo": { "type": "string", "description": "Roll number" },
+        "name": { "type": "string", "description": "Student full name" },
+        "department": { "type": "string", "description": "Academic department" },
+        "cgpa": { "type": "number", "description": "Current cumulative GPA" },
+        "overallAttendance": { "type": "number", "description": "Attendance percentage" },
+        "activeBacklogs": { "type": "number", "description": "Active backlogs count" },
+        "riskLevel": { "type": "string", "enum": ["Critical", "Moderate", "Low", "Exemplary"], "description": "Risk category" },
+        "riskScore": { "type": "number", "description": "Calculated risk index 0-100" }
+      },
+      "required": ["id", "rollNo", "name", "department", "cgpa", "overallAttendance"]
+    },
+    "InterventionItem": {
+      "title": "InterventionItem",
+      "description": "Faculty mentoring and remedial action tracking item",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Intervention unique ID" },
+        "studentId": { "type": "string", "description": "Target student ID" },
+        "issue": { "type": "string", "description": "Identified academic or attendance issue" },
+        "action": { "type": "string", "description": "Prescribed remedial action" },
+        "assignedTo": { "type": "string", "description": "Staff member or mentor" },
+        "status": { "type": "string", "enum": ["Open", "In Progress", "Resolved", "Escalated"], "description": "Status" }
+      },
+      "required": ["id", "studentId", "issue", "action", "assignedTo", "status"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "User accounts and role profiles"
+    },
+    "/students/{studentId}": {
+      "schema": "StudentRecord",
+      "description": "Central student academic tracking records"
+    },
+    "/interventions/{interventionId}": {
+      "schema": "InterventionItem",
+      "description": "Student academic and attendance remediation interventions"
+    }
+  }
+}
